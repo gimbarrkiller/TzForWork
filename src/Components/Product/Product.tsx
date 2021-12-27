@@ -12,7 +12,7 @@ const Product: FC<ProductType> = ({ id, name, price, description, url, deleted, 
   const addToShoppingCart = () => {
     dispatch({
       type: 'ADD_TO_SHOPING_CART',
-      data: { id, name, price, description, url },
+      data: { id },
     })
   }
 
@@ -28,7 +28,7 @@ const Product: FC<ProductType> = ({ id, name, price, description, url, deleted, 
       <Link 
         className="flex" 
         to={{ pathname: "/product/" + id }} 
-        state={{ id, name, price, description, url, deleted, added }}
+        state={{ id }}
       >
         <img className="img" src={url} alt="img" />
         <div className="name">{name}</div>

@@ -1,15 +1,13 @@
 import { useState } from 'react'
-import { useSelector } from 'react-redux'
 import { map, toString } from 'lodash'
 
 import Product from '../../Components/Product/Product'
 
-import './AllProducts.css'
+import './AllListProducts.css'
 import { ProductType } from '../../types/type'
 
-const AllProducts = () => {
+const AllListProducts = ({ allProducts }: any) => {
   const [display, setDisplay] = useState(localStorage.getItem("display") || 'list')
-  const { allProducts }: any = useSelector((state) => state)
   window.addEventListener("unload", (ev) => {
     ev.preventDefault()
     localStorage.setItem("display", toString(display))
@@ -47,4 +45,4 @@ const AllProducts = () => {
   )
 }
 
-export default AllProducts
+export default AllListProducts

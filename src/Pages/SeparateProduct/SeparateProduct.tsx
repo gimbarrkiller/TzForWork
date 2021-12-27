@@ -1,24 +1,18 @@
+import { FC } from 'react'
 import { useDispatch } from 'react-redux'
-import { useLocation } from 'react-router-dom'
-import { get } from 'lodash'
+
+import { ProductType } from '../../types/type'
 
 import './SeparateProduct.css'
 
-const SeparateProduct = () => {
-  const dispatch = useDispatch()
-  const { state } = useLocation()
-  console.log(state)
-  const id = get(state, 'id')
-  const name = get(state, 'name')
-  const price = get(state, 'price')
-  const description = get(state, 'description')
-  const url = get(state, 'url')
-  const added = get(state, 'added')
 
+const SeparateProduct: FC<ProductType> = ({ id, added, name, price, description, url }) => {
+  const dispatch = useDispatch()
+  
   const addToShoppingCart = () => {
     dispatch({
       type: 'ADD_TO_SHOPING_CART',
-      data: { id, name, description, price, url, added },
+      data: { id },
     })
   }
 
