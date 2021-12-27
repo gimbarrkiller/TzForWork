@@ -1,0 +1,1 @@
+export type ReducerAction = 'ADD_COUNTER' | 'DELETE_PRODUCT' | 'ADD_TO_SHOPING_CART'

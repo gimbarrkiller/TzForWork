@@ -3,4 +3,10 @@ button {
   background-color: #bfe9e3;
   border: none;
   border-radius: 6px;
+  cursor: pointer;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: row;
 }

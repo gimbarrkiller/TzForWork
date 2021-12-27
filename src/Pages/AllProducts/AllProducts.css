@@ -1,0 +1,13 @@
+.tile {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.list {
+  display: block;
+}
+
+.btnFirst {
+  margin-right: 5px;
+  margin-bottom: 10px;
+}

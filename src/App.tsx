@@ -1,19 +1,22 @@
-import React from 'react';
 import { Provider } from 'react-redux'
-import AddCounter from './Components/AddCounter/AddCounter';
-
 import store from './store'
-import Counters from './Components/Counters/Counters';
 
-import './App.css';
+import Header from './Components/Header/Header'
+import Main from './Components/Main/Main'
+import SideBar from './Pages/ShopingCart/ShopingCart'
+
+import './App.css'
 
 const App = () => {
   return (
     <Provider store={store}>
-    <AddCounter />
-    <Counters />
+      <Header />
+      <div className="mainContainer">
+        <SideBar />
+        <Main />
+      </div>
     </Provider>
-  );
+  )
 }
 
-export default App;
+export default App

@@ -1,0 +1,14 @@
+.shopingCart {
+  overflow: scroll;
+  display: block;
+  border: solid 1px #ddd;
+  border-radius: 6px;
+  height: 90vh;
+  padding-left: 18px;
+  min-width: 300px;
+}
+
+.carts {
+  display: block;
+  margin-right: 40px;
+}

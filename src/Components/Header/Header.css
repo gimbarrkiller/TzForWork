@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.logo {
+  align-self: center;
+  width: 50px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav li {
+  font-size: 20px;
+  margin-left: 10px;
+  list-style: none;
+}
